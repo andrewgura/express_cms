@@ -5,7 +5,8 @@ var Event = new keystone.List('Event');
 
 Event.add({
   name: { type: String, required: true, initial: true },
-  description: {type: String, required: true, initial: true }
+  description: {type: String, required: true, initial: true },
+  image: { type: Types.CloudinaryImage, required: true, initial: true }
 });
 
 Event.schema.virtual('canAccessKeystone').get(function () {
